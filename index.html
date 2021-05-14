@@ -18,6 +18,8 @@
   <!-- Bootstrap CSS -->
   <link href="./bootstrap.modified.css" rel="stylesheet">
   <link href="./signin.css" rel="stylesheet">
+  <!-- JavaScript Bundle with Popper -->
+  <<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <title>Titulátor</title>
 </head>
 
@@ -32,8 +34,34 @@
     <button id="oslovit" class="btn btn-lg btn-primary btn-block" type="submit" onclick="oslovuj()">
       oslovit
     </button>
-    </br>
 
+
+    </br>
+    <p>
+      <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        rozšířené
+      </a>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card">
+      <div class="card-body">
+
+        <div class="form-check form-check-inline radio-inline contain">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioMuz" value="muz">
+          <label class="form-check-label" for="inlineRadio1">Muž</label>
+        </div>
+        <div class="form-check form-check-inline radio-inline contain">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadioZena" value="zena">
+          <label class="form-check-label" for="inlineRadio2">Žena</label>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    
+
+
+    </br>
     <div hidden id="karta" class="jumbotron text-left">
       <p id="dopis" class="lead bf"></p>
       <p>chtěl bych Vám s lítostí oznámit, že jsem se rozhodl ukončit své studium.</p>

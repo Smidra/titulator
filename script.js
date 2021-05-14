@@ -19,6 +19,13 @@ function jeZena(jmeno_vstup) {
     if (jmeno_vstup.match(/(ova|ová|á)($|,|\.|\ )/g) !== null) {
         return true
     }
+
+    if (document.getElementById("inlineRadioZena").checked){
+        return true
+    }else if(document.getElementById("inlineRadioMuz").checked){
+        return false
+    }
+    
     return false
 }
 
