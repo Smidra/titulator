@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Titulátor</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
+  </head>
+
+  <body class="text-center">
+    <div class="form-signin">
+      <img class="mb-4" src="capka.svg" alt="" width="72" height="72">
+      <h1 class="h3 mb-3 font-weight-normal">Titulátor</h1>
+      <!-- <label for="inputEmail" class="sr-only">Email address</label> -->
+      <input id="inputName" class="form-control" placeholder="Jméno osoby včetně titulů." required autofocus>
+      
+      <br>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" onclick="oslovuj()">Oslov ho!</button>
+      </br>
+
+      <div hidden id="karta" class="jumbotron text-left">
+        <p id="dopis" class="lead bf"></p>
+        <p>chtěl bych Vám s lítostí oznámit, že jsem se rozhodl ukončit své studium.</p>
+        <p>S přáním pěkného dne,</p>
+        <p>Jaromír Vonáčka</p>
+      </div>
+
+      <p class="mt-5 text-muted">
+        <a href='https://rada.smid.io', target=_blank class="mt-5 text-muted" style="text-decoration: none">[by Smidra]</a>
+      </p>
+    </div>
+
+    <script>
+      function oslovuj() {
+        var name = document.getElementById("inputName").value;
+        // Vycisti '.' a ',' split do pole
+        nameClean = name.replaceAll(".",' ');
+        nameClean = nameClean.replaceAll(',',' ');
+        nameArray = nameClean.split(/ +/);
+
+        // Zjisti jestli je titulovany zena
+        var isWoman = false
+        if( name.match(/(ova|ová|á)($|,|\.|\ )/g) !== null ){
+          isWoman = true
+        }
+
+        // Pole možných titulů
+        profesorArr = ["prof", "profesor", "Prof"]
+        docentArr   = ["doc", "docnet"]
+        doktorArr   = ["Ph", "PhD", "ThD", "CSc", "PhDr", "JUDr", "RNDr", "PharmDr", "ThDr", "MUDr", "MDDr", "MVDr", "PaedDr", "MSDr", "RCDr", "RSDr", "RTDr"]
+        inzenyrArr  = ["Ing", "ing"]
+        magistrArr  = ["Mgr", "mgr", "MgA", "PhMr"]
+        licencArr   = ["ThLic"]
+        bakalarArr  = ["bc", "Bc", "BcA"]
+
+        // Najdi doszene tituly
+        profesor  = nameArray.some(r=> profesorArr.includes(r) )
+        docent    = nameArray.some(r=> docentArr.includes(r) )
+        doktor    = nameArray.some(r=> doktorArr.includes(r) )
+        inzenyr   = nameArray.some(r=> inzenyrArr.includes(r) )
+        magistr   = nameArray.some(r=> magistrArr.includes(r) )
+        licenc    = nameArray.some(r=> licencArr.includes(r) )
+        bakalar   = nameArray.some(r=> bakalarArr.includes(r) )
+
+        // Vymysli osloveni
+        var osloveni = ""
+        if( profesor ) {
+          if(isWoman){osloveni = "Vážená paní profesorko,"}
+          else{       osloveni = "Vážený pane profesore,"}
+        }
+        else if ( docent ){
+          if(isWoman){osloveni = "Vážená paní docentko,"}
+          else{       osloveni = "Vážený pane docente,"}
+        }
+        else if ( doktor ){
+          if(isWoman){osloveni = "Vážená paní doktorko,"}
+          else{       osloveni = "Vážený pane doktore,"}
+        }
+        else if ( inzenyr ){
+          if(isWoman){osloveni = "Vážená paní inženýrko,"}
+          else{       osloveni = "Vážený pane inženýre,"}
+        }
+        else if ( magistr ){
+          if(isWoman){osloveni = "Vážená paní magistro,"}
+          else{       osloveni = "Vážený pane magistře,"}
+        }
+        else if ( licenc ){
+          if(isWoman){osloveni = "Vážená paní licenciátko,"}
+          else{       osloveni = "Vážený pane licenciáte,"}
+        }
+        else{
+          if(isWoman){osloveni = "Vážená paní kolegyně,"}
+          else{       osloveni = "Vážený pane kolego,"}
+        }
+        
+        // Nastav a zobraz
+        if(name == "Radek Šmíd"){
+          document.getElementById("dopis").innerHTML = "Husťák";
+        }
+        else{
+          document.getElementById("dopis").innerHTML = osloveni;
+        }
+        document.getElementById("karta").hidden = false
+
+      }
+    </script>
+  </body>
+</html>
