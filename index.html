@@ -1,43 +1,44 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Titulátor</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <!-- Bootstrap CSS -->
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="signin.css" rel="stylesheet">
+  <title>Titulátor</title>
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="bootstrap.min.css" rel="stylesheet">
+<body class="text-center">
 
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
-  </head>
+  <div class="form-signin">
+    <a href=""><img class="mb-4" src="capka.svg" alt="" width="72" height="72"></a>
+    <h1 class="h3 mb-3 font-weight-medium">Titulátor</h1>
+    <input id="inputName" class="form-control" placeholder="prof. RNDr. Tomáš Vomáčka, Ph.D." required autofocus>
 
-  <body class="text-center">
-    <div class="form-signin">
-      <a href=""><img class="mb-4" src="capka.svg" alt="" width="72" height="72"></a>
-      <h1 class="h3 mb-3 font-weight-medium">Titulátor</h1>
-      <!-- <i>Zadejte jméno včetně titulů.</i> -->
-      <input id="inputName" class="form-control" placeholder="prof. RNDr. Tomáš Vomáčka, Ph.D." required autofocus>
-      
-      <br>
-      <button id="oslovit" class="btn btn-lg btn-primary btn-block" type="submit" onclick="oslovuj()">Oslovit</button>
-      </br>
+    </br>
+    <button id="oslovit" class="btn btn-lg btn-primary btn-block" type="submit" onclick="oslovuj()">
+      oslovit
+    </button>
+    </br>
 
-      <div hidden id="karta" class="jumbotron text-left">
-        <p id="dopis" class="lead bf"></p>
-        <p>chtěl bych Vám s lítostí oznámit, že jsem se rozhodl ukončit své studium.</p>
-        <p>S přáním pěkného dne,</p>
-        <p>Jaromír Vonáčka</p>
-      </div>
-
-      <p class="mt-5 text-muted">
-        <a href='https://github.com/Smidra/titulator', target=_blank class="mt-5 text-muted" style="text-decoration: none">[by Smidra]</a>
-      </p>
+    <div hidden id="karta" class="jumbotron text-left">
+      <p id="dopis" class="lead bf"></p>
+      <p>chtěl bych Vám s lítostí oznámit, že jsem se rozhodl ukončit své studium.</p>
+      <p>S přáním pěkného dne,</p>
+      <p>Jaromír Vonáčka</p>
     </div>
 
-    <script type="text/javascript" src="script.js"></script>
-  </body>
+    <p class="mt-5 text-muted">
+      <a href='https://github.com/Smidra/titulator' , target=_blank class="mt-5 text-muted"
+        style="text-decoration: none">[by Smidra]</a>
+    </p>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+
+</body>
+
 </html>
