@@ -16,14 +16,15 @@ function vycisti(jmeno_vstup) {
 
 // Zjisti jestli je titulovany zena
 function jeZena(jmeno_vstup) {
-    if (jmeno_vstup.match(/(ova|ová|á)($|,|\.|\ )/g) !== null) {
-        return true
-    }
-
+    // Zjisti jestli si určil pomocí radiových tlačítek v "rozšířené"
     if (document.getElementById("inlineRadioZena").checked){
         return true
     }else if(document.getElementById("inlineRadioMuz").checked){
         return false
+    }
+    // Odhadni podle přípony jména
+    if (jmeno_vstup.match(/(ova|ová|á)($|,|\.|\ )/g) !== null) {
+        return true
     }
     
     return false
