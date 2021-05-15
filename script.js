@@ -1,3 +1,14 @@
+// Odoznaci vsechny radio buttons
+function odoznac(){
+    document.getElementById("inlineRadioMuz").checked = false;
+    document.getElementById("inlineRadioZena").checked = false;
+    document.getElementById("inlineRadioRektor").checked = false;
+    document.getElementById("inlineRadioProrektor").checked = false;
+    document.getElementById("inlineRadioDekan").checked = false;
+    document.getElementById("inlineRadioProdekan").checked = false;
+
+}
+
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
 function vycisti(jmeno_vstup) {
     // Vycisti '.' a ',' split do pole
