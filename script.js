@@ -17,22 +17,38 @@ function vycisti(jmeno_vstup) {
 // Zjisti jestli je titulovany zena
 function jeZena(jmeno_vstup) {
     // Zjisti jestli si určil pomocí radiových tlačítek v "rozšířené"
-    if (document.getElementById("inlineRadioZena").checked){
+    if (document.getElementById("inlineRadioZena").checked) {
         return true
-    }else if(document.getElementById("inlineRadioMuz").checked){
+    } else if (document.getElementById("inlineRadioMuz").checked) {
         return false
     }
     // Odhadni podle přípony jména
     if (jmeno_vstup.match(/(ova|ová|á)($|,|\.|\ )/g) !== null) {
         return true
     }
-    
+
     return false
 }
 
 // Vymysli spravne osloveni pro vycistene jmeno
 function vymysliOsloveni(nameArray, isWoman) {
-    // Pole možných titulů
+    var osloveni = ""
+    // --- Podle akademické funkce ---
+    if (document.getElementById("inlineRadioRektor").checked) {
+        if (isWoman) { osloveni = "Vážená paní rektorko," } else { osloveni = "Vážený pane rektore," }
+    } else if (document.getElementById("inlineRadioProrektor").checked) {
+        if (isWoman) { osloveni = "Vážená paní prorektorko," } else { osloveni = "Vážený pane prorektore," }
+    } else if (document.getElementById("inlineRadioDekan").checked) {
+        if (isWoman) { osloveni = "Vážená paní děkanko," } else { osloveni = "Vážený pane děkane," }
+    } else if (document.getElementById("inlineRadioProdekan").checked) {
+        if (isWoman) { osloveni = "Vážená paní proděkanko," } else { osloveni = "Vážený pane proděkane," }
+    }
+    // POkud bylo nastaveno, vratime protoze funkce je vice nez titul
+    if (osloveni != "") {
+        return osloveni
+    }
+
+    // --- Pole možných titulů ---
     profesorArr = ["prof", "profesor"]
     docentArr = ["doc", "docnet"]
     doktorArr = ["phd", "thd", "phdr", "judr", "rndr", "pharmdr", "thdr", "mudr", "mddr", "mvdr", "paeddr", "msdr", "rcdr", "rsdr", "rtdr"]
@@ -51,7 +67,6 @@ function vymysliOsloveni(nameArray, isWoman) {
     bakalar = nameArray.some(r => bakalarArr.includes(r))
 
     // Vymysli osloveni z hierarchie
-    var osloveni = ""
     if (profesor) {
         if (isWoman) { osloveni = "Vážená paní profesorko," } else { osloveni = "Vážený pane profesore," }
     }

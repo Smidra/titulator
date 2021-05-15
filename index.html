@@ -22,6 +22,17 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
     crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+
   <title>Titulátor</title>
 </head>
 
@@ -59,31 +70,31 @@
             <label class="form-check-label" for="inlineRadio2">Žena</label>
           </div>
 
-          <!--
+
           </br>
           </br>
-          Akademické funkce
           <p><strong>Akademické funkce</strong></p>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckboxRektor" value="rektor">
-            <label class="form-check-label" for="inlineCheckbox1">Rektor</label>
+          <div class="form-check form-check-inline radio-inline contain">
+            <input class="form-check-input" type="radio" name="inlineRadioFunkce" id="inlineRadioRektor" value="rektor">
+            <label class="form-check-label">Rektor</label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckboxRektor" value="prorektor">
-            <label class="form-check-label" for="inlineCheckbox1">Prorektor</label>
+          <div class="form-check form-check-inline radio-inline contain">
+            <input class="form-check-input" type="radio" name="inlineRadioFunkce" id="inlineRadioProrektor"
+              value="prorektor">
+            <label class="form-check-label">Prorektor</label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckboxRektor" value="dekan">
-            <label class="form-check-label" for="inlineCheckbox1">Děkan</label>
+          <div class="form-check form-check-inline radio-inline contain">
+            <input class="form-check-input" type="radio" name="inlineRadioFunkce" id="inlineRadioDekan"
+              value="dekan">
+            <label class="form-check-label">Děkan</label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckboxRektor" value="prodekan">
-            <label class="form-check-label" for="inlineCheckbox1">Proděkan</label>
+          <div class="form-check form-check-inline radio-inline contain">
+            <input class="form-check-input" type="radio" name="inlineRadioFunkce" id="inlineRadioProdekan"
+              value="prodekan">
+            <label class="form-check-label">Proděkan</label>
           </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="checkbox" id="inlineCheckboxRektor" value="promotor">
-            <label class="form-check-label" for="inlineCheckbox1">Promotor</label>
-          </div>
+
+          <!--
           -->
 
         </div>
@@ -102,7 +113,9 @@
       <a href='https://github.com/Smidra/titulator' , target=_blank class="mt-5 text-muted"
         style="text-decoration: none">[by Smidra]</a>
     </p>
+
   </div>
+
   <script type="text/javascript" src="script.js"></script>
 
 </body>
