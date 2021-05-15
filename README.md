@@ -2,6 +2,8 @@ Titulátor
 =========
 *Titulátor Vám pomůže oslovit akademika s mnoha tituly.*
 
+[live demo](https://smidra.github.io/titulator/)
+
 <img src="./capka.svg" width="60" alt="Ori">
 
 Co to je?
