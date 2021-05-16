@@ -74,7 +74,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "dr":
                 detailtext += "<i></i>" + "<p><b>Titul:</b>    " + "Dr." + "</p>"
                 break;
-            */
+            
 
             // 7 + rigorozni + minulost 
             case "akadarch":
@@ -97,10 +97,11 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "phdr":
             case "rndr":
             case "pharmdr":
-            case "paeddr":
+            case "thlic":
             case "thdr":
-                detailtext += "<i>Malý doktorát je akademicko-vědecký titul udělen po složení rigorózní zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
+                detailtext += "<i>(ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
                 break;
+            */
             
             // 7 + soucasnost
             case "ingarch":
