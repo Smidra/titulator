@@ -1,5 +1,5 @@
 // Odoznaci vsechny radio buttons
-function odoznac(){
+function odoznac() {
     document.getElementById("inlineRadioMuz").checked = false;
     document.getElementById("inlineRadioZena").checked = false;
     document.getElementById("inlineRadioRektor").checked = false;
@@ -7,6 +7,11 @@ function odoznac(){
     document.getElementById("inlineRadioDekan").checked = false;
     document.getElementById("inlineRadioProdekan").checked = false;
 
+}
+
+// Zavři okno s výsledkem
+function zavri() {
+    document.getElementById("karta").hidden = true
 }
 
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
