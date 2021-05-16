@@ -30,24 +30,24 @@ RCDr.
 RTDr.
 ThMgr.
 
-8 současnost
-Ph.D.
-DSc.
-
 8 minulost?
 CSc.
 Dr.
 DrSc.
 Th.D.
 
-X Vědecko pedagogický titul
-as.
-odb.as.
-doc.
-prof.
+    8 současnost
+    Ph.D.
+    DSc.
 
-Neakademický titul
-DiS.
+    X Vědecko pedagogický titul
+    as.
+    odb.as.
+    doc.
+    prof.
+
+    Neakademický titul
+    DiS.
 
     Čestná hodnost
     dr. h. c.

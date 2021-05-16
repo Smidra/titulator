@@ -20,6 +20,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
     // Projeď tituly a vypiš co k nim víš
     for (slovo of nameArray) {
         switch (slovo) {
+            // Čestné tituly
             case "profhc":
                 detailtext += "<i>professor honoris causa, tedy čestná profesura. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "prof. h. c." + "</p>"
                 break;
@@ -27,11 +28,13 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "drhc":
                 detailtext += "<i>doctor honoris causa, tedy čestný doktorát. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "dr. h. c." + "</p>"
                 break;
-
+            
+            // Neakademické tituly
             case "dis":
-                detailtext += "<i>Diplomovaný specialista. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "DiS." + "</p>"
+                detailtext += "<i>Neakademický titul diplomovaný specialista. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "DiS." + "</p>"
                 break;
 
+            // Věděcko-pedagogické tituly
             case "profesor":
             case "prof":
                 detailtext += "<i>Profesory jmenuje prezident. Je to nejvyšší vědecko-pedagogický titul.</i>" + "<p><b>Titul:</b>    " + "profesor" + "</p>"
@@ -42,9 +45,22 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 detailtext += "<i>Docent je druhý nejvyšší vědecko-pedagogický titul.</i>" + "<p><b>Titul:</b>    " + "docent  " + "</p>"
                 break;
 
+            case "odbas":
+                detailtext += "<i>Odborný asistent (angl. assistant professor). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "odb. as." + "</p>"
+                break;
+    
+            case "as":
+                detailtext += "<i>Asistent je nejnižší věděcko-pedagogický titul. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "as." + "</p>"
+                break;
+
+            // Vědecko-akademické tituly
             case "phd":
                 detailtext += "<i>Velký doktorát je nejvyšší akademicko-vědecký titul (ISCED 8).</i>" + "<p><b>Titul:</b>    " + "Ph.D.  " + "</p>"
                 break;
+            
+            case "dsc":
+                detailtext += "<i>Dotor věd (doctor scientiarum) je neoficiální titul udělovaný AV ČR za 'zvláště vysoké kvalifikace prokázané vytvořením závažných, vědecky originálních prací důležitých pro rozvoj bádání.'</i>" + "<p><b>Titul:</b>    " + "DSc.  " + "</p>"
+                break;                
 
             case "mudr":
             case "mddr":
@@ -113,6 +129,8 @@ function vycisti(jmeno_vstup) {
     nameClean = nameClean.replaceAll('d  eng  h c', 'drhc'); // Má jenom Zuna...
     nameClean = nameClean.replaceAll('prof h c', 'profhc');
     nameClean = nameClean.replaceAll('prof  h  c', 'profhc');
+    nameClean = nameClean.replaceAll('odb as', 'odbas');
+    nameClean = nameClean.replaceAll('odb  as', 'odbas');
     return nameClean
 }
 
