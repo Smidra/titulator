@@ -31,9 +31,9 @@ RTDr.
 ThMgr.
 
 8 minulost?
-CSc.
+    CSc.
+    DrSc.
 Dr.
-DrSc.
 Th.D.
 
     8 současnost

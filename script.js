@@ -60,7 +60,19 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             
             case "dsc":
                 detailtext += "<i>Dotor věd (doctor scientiarum) je neoficiální titul udělovaný AV ČR za 'zvláště vysoké kvalifikace prokázané vytvořením závažných, vědecky originálních prací důležitých pro rozvoj bádání.'</i>" + "<p><b>Titul:</b>    " + "DSc.  " + "</p>"
-                break;                
+                break;
+        
+            case "csc":
+                detailtext += "<i>Kandidát věd (candidatus scientiarum) byla nižší vědecká hodnost (ISCED 8). Natitulujeme.</i>" + "<p><b>Titul:</b>    " + "CSc." + "</p>"
+                break;
+            
+            case "drsc":
+                detailtext += "<i>Doktor věd (doctor scientiarum) byla vyšší vědecká hodnost (ISCED 8). Dnes částečně nahrazena neoficiálním titulem DSc.</i>" + "<p><b>Titul:</b>    " + "DrSc." + "</p>"
+                break;
+
+            case "dr":
+                detailtext += "<i>Doktor věd (doctor scientiarum) byla vyšší vědecká hodnost. Dnes částečně nahrazena neoficiálním titulem DSc.</i>" + "<p><b>Titul:</b>    " + "DrSc." + "</p>"
+                break;
 
             case "mudr":
             case "mddr":
