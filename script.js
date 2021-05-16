@@ -22,11 +22,11 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
         switch (slovo) {
             // Čestné tituly
             case "profhc":
-                detailtext += "<i>professor honoris causa, tedy čestná profesura. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "prof. h. c." + "</p>"
+                detailtext += "<i>Čestná profesura (professor honoris causa). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "prof. h. c." + "</p>"
                 break;
 
             case "drhc":
-                detailtext += "<i>doctor honoris causa, tedy čestný doktorát. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "dr. h. c." + "</p>"
+                detailtext += "<i>Čestný doktorát (doctor honoris causa). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "dr. h. c." + "</p>"
                 break;
             
             // Neakademické tituly
@@ -63,17 +63,33 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 break;
         
             case "csc":
-                detailtext += "<i>Kandidát věd (candidatus scientiarum) byla nižší vědecká hodnost (ISCED 8). Natitulujeme.</i>" + "<p><b>Titul:</b>    " + "CSc." + "</p>"
+                detailtext += "<i>Kandidát věd (candidatus scientiarum) byla nižší vědecká hodnost (ISCED 8). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "CSc." + "</p>"
                 break;
             
             case "drsc":
                 detailtext += "<i>Doktor věd (doctor scientiarum) byla vyšší vědecká hodnost (ISCED 8). Dnes částečně nahrazena neoficiálním titulem DSc.</i>" + "<p><b>Titul:</b>    " + "DrSc." + "</p>"
                 break;
 
+            /*
             case "dr":
-                detailtext += "<i>Doktor věd (doctor scientiarum) byla vyšší vědecká hodnost. Dnes částečně nahrazena neoficiálním titulem DSc.</i>" + "<p><b>Titul:</b>    " + "DrSc." + "</p>"
+                detailtext += "<i></i>" + "<p><b>Titul:</b>    " + "Dr." + "</p>"
                 break;
+            */
 
+            // 7 + rigorozni + minulost 
+            case "akadarch":
+            case "akmal":
+            case "aksoch":
+            case "msdr":
+            case "paedr":
+            case "phmr":
+            case "rcdr":
+            case "rtdr":
+            case "thmgr":
+                detailtext += "<i>Malý doktorát byl akademicko-vědecký titul udělen po složení rigorózní zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
+                break;
+            
+            // 7 + rigorozni + soucasnost
             case "mudr":
             case "mddr":
             case "mvdr":
@@ -85,7 +101,8 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "thdr":
                 detailtext += "<i>Malý doktorát je akademicko-vědecký titul udělen po složení rigorózní zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
                 break;
-
+            
+            // 7 + soucasnost
             case "ingarch":
             case "ing":
                 detailtext += "<i>Inženýr je akademicko-vědecký titul udělen po obhájení diplomové práce a složení státních závěrečných zkoušek (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
@@ -96,9 +113,13 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 detailtext += "<i>Magistr je akademicko-vědecký titul udělen po obhájení diplomové práce a složení státních závěrečných zkoušek (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Mgr.  " + "</p>"
                 break;
 
+            // 6 + soucasnost
             case "bc":
+                detailtext += "<i>Bakalář (baccalaureus) je akademicko-vědecký titul udělen po obhájení bakalářské práce a složení státní závěrečné zkoušky (ISCED 6). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "Bc.  " + "</p>"
+                break;
+
             case "bca":
-                detailtext += "<i>Bakalář je akademicko-vědecký titul udělen po obhájení bakalářské práce a složení státních závěrečných zkoušek (ISCED 6). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "Bc.  " + "</p>"
+                detailtext += "<i>Bakalář umění (baccalaureus artis) je akademicko-vědecký titul udělen po složení státní závěrečné zkoušky a větišnou obhajobě práce (ISCED 6). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "Bc.  " + "</p>"
                 break;
         }
     }

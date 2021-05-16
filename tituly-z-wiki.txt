@@ -1,15 +1,16 @@
-6 současnost
-Bc.
-BcA.
+    6 současnost
+    Bc.
+    BcA.
 
 7 současnost
 Ing.
 Ing. arch.
+MgA.
+Mgr.
+
 MUDr.
 MDDr.
 MVDr.
-MgA.
-Mgr.
 
 7 + rigorozni současnost
 JUDr.
