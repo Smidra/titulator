@@ -20,6 +20,18 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
     // Projeď tituly a vypiš co k nim víš
     for (slovo of nameArray) {
         switch (slovo) {
+            case "profhc":
+                detailtext += "<i>professor honoris causa, tedy čestná profesura. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "prof. h. c." + "</p>"
+                break;
+
+            case "drhc":
+                detailtext += "<i>doctor honoris causa, tedy čestný doktorát. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "dr. h. c." + "</p>"
+                break;
+
+            case "dis":
+                detailtext += "<i>Diplomovaný specialista. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "DiS." + "</p>"
+                break;
+
             case "profesor":
             case "prof":
                 detailtext += "<i>Profesory jmenuje prezident. Je to nejvyšší vědecko-pedagogický titul.</i>" + "<p><b>Titul:</b>    " + "profesor" + "</p>"
@@ -96,6 +108,11 @@ function vycisti(jmeno_vstup) {
     nameClean = nameClean.replaceAll('ing  arch', 'ingarch');
     nameClean = nameClean.replaceAll('akad  arch', 'akadarch');
     nameClean = nameClean.replaceAll('ak  mal', 'akmal');
+    nameClean = nameClean.replaceAll('dr h c', 'drhc');
+    nameClean = nameClean.replaceAll('dr  h  c', 'drhc');
+    nameClean = nameClean.replaceAll('d  eng  h c', 'drhc'); // Má jenom Zuna...
+    nameClean = nameClean.replaceAll('prof h c', 'profhc');
+    nameClean = nameClean.replaceAll('prof  h  c', 'profhc');
     return nameClean
 }
 
