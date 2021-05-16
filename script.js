@@ -6,8 +6,20 @@ function detailne(){
 }
 
 // Nastav detail ohledně titulů
-function nastavDetail(){
-    document.getElementById("textDetail").innerHTML = "Ahojky"
+function nastavDetail(nameArray, isWoman, hasFunction, whatFunction){
+    var detailtext = ""
+    detailtext = detailtext + "<i>Pohlaví určeno podle přípon -á/-ová, nebo manuálně.</i>"
+    detailtext = detailtext + "<p><b>Pohlaví:</b>    " 
+    // Nastav detail pohlaví
+    if(isWoman){detailtext = detailtext + " žena</p>"}
+    else{detailtext = detailtext + " muž</p>"}
+
+    // Akademický titul
+    if(hasFunction){detailtext += "<i>Akademické funkce mají přednost před tituly.</i>" + "<p><b>Funkce:</b>    " + whatFunction + "</p>"}
+
+    console.log(detailtext)
+    // Nastav text detailu
+    document.getElementById("textDetail").innerHTML = detailtext
 }
 
 // Odoznaci vsechny radio buttons
@@ -58,23 +70,30 @@ function jeZena(jmeno_vstup) {
     return false
 }
 
-// Vymysli spravne osloveni pro vycistene jmeno
-function vymysliOsloveni(nameArray, isWoman) {
+// Vymysli spravne osloveni akademicke funkce
+function vymysliFunkci(isWoman){
     var osloveni = ""
+    var akademicka_funkce = ""
     // --- Podle akademické funkce ---
     if (document.getElementById("inlineRadioRektor").checked) {
         if (isWoman) { osloveni = "Vážená paní rektorko," } else { osloveni = "Vážený pane rektore," }
+        akademicka_funkce = "Rektor"
     } else if (document.getElementById("inlineRadioProrektor").checked) {
         if (isWoman) { osloveni = "Vážená paní prorektorko," } else { osloveni = "Vážený pane prorektore," }
+        akademicka_funkce = "Prorektor"
     } else if (document.getElementById("inlineRadioDekan").checked) {
         if (isWoman) { osloveni = "Vážená paní děkanko," } else { osloveni = "Vážený pane děkane," }
+        akademicka_funkce = "Děkan"
     } else if (document.getElementById("inlineRadioProdekan").checked) {
         if (isWoman) { osloveni = "Vážená paní proděkanko," } else { osloveni = "Vážený pane proděkane," }
+        akademicka_funkce = "Proděkan"
     }
-    // POkud bylo nastaveno, vratime protoze funkce je vice nez titul
-    if (osloveni != "") {
-        return osloveni
-    }
+    return [osloveni, akademicka_funkce]
+}
+
+// Vymysli spravne osloveni pro vycistene jmeno
+function vymysliOsloveni(nameArray, isWoman) {
+    var osloveni = ""
 
     // --- Pole možných titulů ---
     profesorArr = ["prof", "profesor"]
@@ -125,8 +144,19 @@ function oslovuj() {
     var nameClean = vycisti(name)
     var nameArray = nameClean.split(/ +/);
     var isWoman = jeZena(nameClean)
-    var osloveni = vymysliOsloveni(nameArray, isWoman)
-    nastavDetail()
+
+    // Zkus oslovit akad. funkci
+    var osloveni_s_funkci = vymysliFunkci(isWoman)
+    var osloveni = osloveni_s_funkci[0]
+    var funkce = osloveni_s_funkci[1]
+    if (osloveni == "") {
+        // Nemel akad fci, oslovujeme tituly
+        osloveni = vymysliOsloveni(nameArray, isWoman)
+        nastavDetail(nameArray, isWoman, false, funkce)
+    }else{
+        // Mel akad fci, neoslovujeme tituly
+        nastavDetail(nameArray, isWoman, true, funkce)
+    }
 
     // Nastav a zobraz
     if (name == "Radek Šmíd") {
