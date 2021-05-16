@@ -32,30 +32,30 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
-
   <title>Titulátor</title>
 </head>
 
 <body class="text-center">
-
   <div class="form-signin">
+    <!-- Obrázek, nápis, vstup -->
     <a href=""><img class="mb-4" src="capka.svg" alt="" width="72" height="72"></a>
     <h1 class="h3 mb-3 font-weight-medium">Titulátor</h1>
     <input id="inputName" class="form-control" placeholder="prof. RNDr. Tomáš Vomáčka, Ph.D." required autofocus>
 
     </br>
+    <!-- Tlačítko oslovit -->
     <button id="oslovit" class="btn btn-lg btn-primary btn-block" type="submit" onclick="oslovuj()">
       oslovit
     </button>
 
-
     </br>
-    <p>
-      <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+    <!-- Tlačítko rozšířené -->
+    <p><a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
         aria-controls="collapseExample">
-        rozšířené
-      </a>
+        rozšířené</a>
     </p>
+
+    <!-- Karta rozšířených voleb -->
     <div class="collapse" id="collapseExample">
       <div class="card">
         <div class="card-body text-left">
@@ -73,6 +73,7 @@
 
           </br>
           </br>
+          <!-- Akademická funkce -->
           <p><strong>Akademické funkce</strong></p>
           <div class="form-check form-check-inline radio-inline contain">
             <input class="form-check-input" type="radio" name="inlineRadioFunkce" id="inlineRadioRektor" value="rektor">
@@ -102,20 +103,27 @@
     </div>
 
     </br>
+    <!-- Karta výsledků -->
     <div hidden id="karta" class="jumbotron text-left">
-      <p id="dopis" class="lead bf"></p>
+      <strong><p id="dopis" class="lead"></p></strong>
       <p>chtěl bych Vám s lítostí oznámit, že jsem se rozhodl ukončit své studium.</p>
       <p>S přáním pěkného dne,</p>
       <p>Jaromír Vonáčka</p>
       </br>
-      <button class="btn btn-secondary" type="submit" onclick="zavri()">zavřít</button>
+
+      <!-- Detail -->
+      <p><a class="btn btn-primary" data-toggle="collapse" href="#collapseDetail" role="button" aria-expanded="false"
+          aria-controls="collapseExample">detail</a></p>
+      <div class="collapse" id="collapseDetail">
+        <div class="card card-body" id="textDetail"></div>
+      </div>
     </div>
 
+    <!-- Patička -->
     <p class="mt-5 text-muted">
       <a href='https://github.com/Smidra/titulator' , target=_blank class="mt-5 text-muted"
         style="text-decoration: none">[by Smidra]</a>
     </p>
-
   </div>
 
   <script type="text/javascript" src="script.js"></script>

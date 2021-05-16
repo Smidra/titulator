@@ -1,3 +1,15 @@
+// Zobraz detail vysledku
+var showDetail = true
+function detailne(){
+    showDetail = !showDetail
+    document.getElementById("detail").hidden = showDetail
+}
+
+// Nastav detail ohledně titulů
+function nastavDetail(){
+    document.getElementById("textDetail").innerHTML = "Ahojky"
+}
+
 // Odoznaci vsechny radio buttons
 function odoznac() {
     document.getElementById("inlineRadioMuz").checked = false;
@@ -114,6 +126,7 @@ function oslovuj() {
     var nameArray = nameClean.split(/ +/);
     var isWoman = jeZena(nameClean)
     var osloveni = vymysliOsloveni(nameArray, isWoman)
+    nastavDetail()
 
     // Nastav a zobraz
     if (name == "Radek Šmíd") {
