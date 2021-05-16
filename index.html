@@ -40,7 +40,7 @@
     <!-- Obrázek, nápis, vstup -->
     <a href=""><img class="mb-4" src="capka.svg" alt="" width="72" height="72"></a>
     <h1 class="h3 mb-3 font-weight-medium">Titulátor</h1>
-    <input id="inputName" class="form-control" placeholder="prof. RNDr. Tomáš Vomáčka, Ph.D." required autofocus>
+    <input id="inputName" class="form-control" placeholder="Například: prof. RNDr. Tomáš Vomáčka, Ph.D." required autofocus>
 
     </br>
     <!-- Tlačítko oslovit -->
@@ -105,18 +105,16 @@
     </br>
     <!-- Karta výsledků -->
     <div hidden id="karta" class="jumbotron text-left">
-      <strong><p id="dopis" class="lead"></p></strong>
-      <p>chtěl bych Vám s lítostí oznámit, že jsem se rozhodl ukončit své studium.</p>
-      <p>S přáním pěkného dne,</p>
-      <p>Jaromír Vonáčka</p>
-      </br>
+      <p class="h4">
+        <a class="text-muted">Oslovujeme: </a>
+        <a id="dopis" class=""></a>
+      </p>
 
       <!-- Detail -->
-      <p><a class="btn btn-primary" data-toggle="collapse" href="#collapseDetail" role="button" aria-expanded="false"
-          aria-controls="collapseExample">detail</a></p>
-      <div class="collapse" id="collapseDetail">
-        <div class="card card-body" id="textDetail"></div>
-      </div>
+      
+      <a class="btn-link" data-toggle="collapse" href="#collapseDetail" role="button" aria-expanded="false"
+          aria-controls="collapseExample">detail</a>
+      <div class="collapse" id="collapseDetail"><div class="card card-body" id="textDetail"></div></div>
     </div>
 
     <!-- Patička -->

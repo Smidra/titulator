@@ -1,23 +1,68 @@
 // Zobraz detail vysledku
 var showDetail = true
-function detailne(){
+function detailne() {
     showDetail = !showDetail
     document.getElementById("detail").hidden = showDetail
 }
 
 // Nastav detail ohledně titulů
-function nastavDetail(nameArray, isWoman, hasFunction, whatFunction){
+function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
     var detailtext = ""
-    detailtext = detailtext + "<i>Pohlaví určeno podle přípon -á/-ová, nebo manuálně.</i>"
-    detailtext = detailtext + "<p><b>Pohlaví:</b>    " 
+    detailtext += "<i>Pohlaví určeno podle přípon -á/-ová, nebo manuálně.</i>"
+    detailtext += "<p><b>Pohlaví:</b>    "
     // Nastav detail pohlaví
-    if(isWoman){detailtext = detailtext + " žena</p>"}
-    else{detailtext = detailtext + " muž</p>"}
+    if (isWoman) { detailtext = detailtext + " žena</p>" }
+    else { detailtext += " muž</p>" }
 
-    // Akademický titul
-    if(hasFunction){detailtext += "<i>Akademické funkce mají přednost před tituly.</i>" + "<p><b>Funkce:</b>    " + whatFunction + "</p>"}
+    // Nastav akademický titul
+    if (hasFunction) { detailtext += "<i>Akademické funkce mají přednost před tituly.</i>" + "<p><b>Funkce:</b>    " + whatFunction + "</p>" }
 
-    console.log(detailtext)
+    // Projeď tituly a vypiš co k nim víš
+    for (slovo of nameArray) {
+        switch (slovo) {
+            case "profesor":
+            case "prof":
+                detailtext += "<i>Profesory jmenuje prezident. Je to nejvyšší vědecko-pedagogický titul.</i>" + "<p><b>Titul:</b>    " + "profesor" + "</p>"
+                break;
+
+            case "docent":
+            case "doc":
+                detailtext += "<i>Docent je druhý nejvyšší vědecko-pedagogický titul.</i>" + "<p><b>Titul:</b>    " + "docent  " + "</p>"
+                break;
+
+            case "phd":
+                detailtext += "<i>Velký doktorát je nejvyšší akademicko-vědecký titul (ISCED 8).</i>" + "<p><b>Titul:</b>    " + "Ph.D.  " + "</p>"
+                break;
+
+            case "mudr":
+            case "mddr":
+            case "mvdr":
+            case "judr":
+            case "phdr":
+            case "rndr":
+            case "pharmdr":
+            case "paeddr":
+            case "thdr":
+                detailtext += "<i>Malý doktorát je akademicko-vědecký titul udělen po složení rigorózní zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
+                break;
+
+            case "ingarch":
+            case "ing":
+                detailtext += "<i>Inženýr je akademicko-vědecký titul udělen po obhájení diplomové práce a složení státních závěrečných zkoušek (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
+                break;
+
+            case "mgr":
+            case "mga":
+                detailtext += "<i>Magistr je akademicko-vědecký titul udělen po obhájení diplomové práce a složení státních závěrečných zkoušek (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Mgr.  " + "</p>"
+                break;
+
+            case "bc":
+            case "bca":
+                detailtext += "<i>Bakalář je akademicko-vědecký titul udělen po obhájení bakalářské práce a složení státních závěrečných zkoušek (ISCED 6). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "Bc.  " + "</p>"
+                break;
+        }
+    }
+
     // Nastav text detailu
     document.getElementById("textDetail").innerHTML = detailtext
 }
@@ -71,7 +116,7 @@ function jeZena(jmeno_vstup) {
 }
 
 // Vymysli spravne osloveni akademicke funkce
-function vymysliFunkci(isWoman){
+function vymysliFunkci(isWoman) {
     var osloveni = ""
     var akademicka_funkce = ""
     // --- Podle akademické funkce ---
@@ -97,7 +142,7 @@ function vymysliOsloveni(nameArray, isWoman) {
 
     // --- Pole možných titulů ---
     profesorArr = ["prof", "profesor"]
-    docentArr = ["doc", "docnet"]
+    docentArr = ["doc", "docent"]
     doktorArr = ["phd", "thd", "phdr", "judr", "rndr", "pharmdr", "thdr", "mudr", "mddr", "mvdr", "paeddr", "msdr", "rcdr", "rsdr", "rtdr"]
     inzenyrArr = ["ing", "ingarch"]
     magistrArr = ["mgr", "mga", "phmr"]
@@ -153,7 +198,7 @@ function oslovuj() {
         // Nemel akad fci, oslovujeme tituly
         osloveni = vymysliOsloveni(nameArray, isWoman)
         nastavDetail(nameArray, isWoman, false, funkce)
-    }else{
+    } else {
         // Mel akad fci, neoslovujeme tituly
         nastavDetail(nameArray, isWoman, true, funkce)
     }
