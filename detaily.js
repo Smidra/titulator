@@ -111,7 +111,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 detailtext += "<i>Doktor zubního lékařství (medicinae stomatologicae doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "MSDr." + "</p>"
                 break;
 
-            case "paedr":
+            case "paeddr":
                 detailtext += "<i>Doktor pedagogiky (paedagogiae doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "PaedDr." + "</p>"
                 break;
 
