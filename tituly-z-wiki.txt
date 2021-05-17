@@ -9,12 +9,12 @@ MUC.
 7 současnost
 Ing.
 Ing. arch.
-MgA.
-Mgr.
+    MgA.
+    Mgr.
 
-MUDr.
-MDDr.
-MVDr.
+    MUDr.
+    MDDr.
+    MVDr.
 
 7 + rigorozni současnost
     JUDr.
