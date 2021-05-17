@@ -1,8 +1,8 @@
 // Zobraz detail vysledku
-var showDetail = true
+var showDetail = false
 function detailne() {
+    document.getElementById("textDetail").hidden = showDetail
     showDetail = !showDetail
-    document.getElementById("detail").hidden = showDetail
 }
 
 // Nastav detail ohledně titulů
