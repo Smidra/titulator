@@ -93,10 +93,22 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "mudr":
             case "mddr":
             case "mvdr":
+
             case "judr":
+                detailtext += "<i>Doktor práv (juris utriusque doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "JUDr." + "</p>"
+                break;
+
             case "phdr":
+                detailtext += "<i>Doktor filozofie (philosophiae doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "PhDr." + "</p>"
+                break;
+
             case "rndr":
+                detailtext += "<i>Doktor přírodních věd (rerum naturalium doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "RNDr." + "</p>"
+                break;
+            
             case "pharmdr":
+                detailtext += "<i>Doktor farmacie (pharmaciae doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "PharmDr." + "</p>"
+                break;
 
             case "thlic":
                 detailtext += "<i>Licentát teologie (theologiae licentiatus) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "ThLic." + "</p>"

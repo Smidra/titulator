@@ -1,5 +1,6 @@
 --Jiné tituly--
 FEng.
+MUC.
 
     6 současnost
     Bc.
@@ -16,10 +17,10 @@ MDDr.
 MVDr.
 
 7 + rigorozni současnost
-JUDr.
-PhDr.
-RNDr.
-PharmDr.
+    JUDr.
+    PhDr.
+    RNDr.
+    PharmDr.
     ThLic.
     ThDr.
 
