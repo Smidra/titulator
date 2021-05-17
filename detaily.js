@@ -178,7 +178,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             
             // 7 + soucasnost
             case "ingarch": 
-                detailtext += "<i>Inženýr architekt je akademicko-vědecký titul udělený po obhájení diplomové práce a složení státní závěrečné zkoušky (ISCED 7). Můžeme oslovovat i 'pane architekte'.</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
+                detailtext += "<i>Inženýr architekt je akademicko-vědecký titul udělený po obhájení diplomové práce a složení státní závěrečné zkoušky (ISCED-7). Můžeme oslovovat i 'pane architekte'.</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
                 break;
 
             case "ing":
