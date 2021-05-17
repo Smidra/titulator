@@ -88,7 +88,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "thmgr":
                 detailtext += "<i>Malý doktorát byl akademicko-vědecký titul udělen po složení rigorózní zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
                 break;
-            
+            */
             // 7 + rigorozni + soucasnost
             case "mudr":
             case "mddr":
@@ -97,21 +97,24 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "phdr":
             case "rndr":
             case "pharmdr":
+
             case "thlic":
-            case "thdr":
-                detailtext += "<i>(ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
+                detailtext += "<i>Licentát teologie (theologiae licentiatus) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "ThLic." + "</p>"
                 break;
-            */
+
+            case "thdr":
+                detailtext += "<i>Doktor teologie (theologiae doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "ThDr." + "</p>"
+                break;
             
             // 7 + soucasnost
             case "ingarch":
             case "ing":
-                detailtext += "<i>Inženýr je akademicko-vědecký titul udělen po obhájení diplomové práce a složení státních závěrečných zkoušek (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
+                detailtext += "<i>Inženýr je akademicko-vědecký titul udělený po obhájení diplomové práce a složení státní závěrečné zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
                 break;
 
             case "mgr":
             case "mga":
-                detailtext += "<i>Magistr je akademicko-vědecký titul udělen po obhájení diplomové práce a složení státních závěrečných zkoušek (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Mgr.  " + "</p>"
+                detailtext += "<i>Magistr je akademicko-vědecký titul udělený po obhájení diplomové práce a složení státní závěrečné zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Mgr.  " + "</p>"
                 break;
 
             // 6 + soucasnost
@@ -243,9 +246,9 @@ function vymysliOsloveni(nameArray, isWoman) {
     else if (magistr) {
         if (isWoman) { osloveni = "Vážená paní magistro," } else { osloveni = "Vážený pane magistře," }
     }
-    else if (licenc) {
-        if (isWoman) { osloveni = "Vážená paní licenciátko," } else { osloveni = "Vážený pane licenciáte," }
-    }
+    //else if (licenc) {
+    //    if (isWoman) { osloveni = "Vážená paní licenciátko," } else { osloveni = "Vážený pane licenciáte," }
+    //}
     else {
         if (isWoman) { osloveni = "Vážená paní kolegyně," } else { osloveni = "Vážený pane kolego," }
     }

@@ -1,3 +1,6 @@
+--Jiné tituly--
+FEng.
+
     6 současnost
     Bc.
     BcA.
@@ -17,8 +20,8 @@ JUDr.
 PhDr.
 RNDr.
 PharmDr.
-ThLic.
-ThDr.
+    ThLic.
+    ThDr.
 
 7 + rigorozni minulost
 akad. arch.
