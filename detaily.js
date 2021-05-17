@@ -75,7 +75,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
 
             // Vědecko-akademické tituly
             case "phd":
-                detailtext += "<i>Velký doktorát je nejvyšší akademicko-vědecký titul (ISCED 8).</i>" + "<p><b>Titul:</b>    " + "Ph.D.  " + "</p>"
+                detailtext += "<i>Velký doktorát je nejvyšší akademicko-vědecký titul (ISCED-8).</i>" + "<p><b>Titul:</b>    " + "Ph.D.  " + "</p>"
                 break;
             
             case "dsc":
