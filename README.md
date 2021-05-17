@@ -2,7 +2,7 @@ Titulátor
 =========
 *Titulátor Vám pomůže oslovit akademika s mnoha tituly.*
 
-[live demo](https://smidra.github.io/titulator/)
+K dispozici na adrese **[Titulátor.cz](https://www.titulator.cz/)**
 
 <img src="./capka.svg" width="60" alt="Ori">
 
