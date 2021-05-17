@@ -91,9 +91,17 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             */
             // 7 + rigorozni + soucasnost
             case "mudr":
-            case "mddr":
-            case "mvdr":
+                detailtext += "<i>Doktor medicíny (medicinae universae doctor) patří mezi tzv. profesní doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "MUDr." + "</p>"
+                break;
 
+            case "mddr":
+                detailtext += "<i>Doktor zubního lékařství (medicinae dentium doctor) patří mezi tzv. profesní doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "MDDr." + "</p>"
+                break;
+
+            case "mvdr":
+                detailtext += "<i>Doktor veterinární medicíny (medicinae veterinariae doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "MVDr." + "</p>"
+                break;
+    
             case "judr":
                 detailtext += "<i>Doktor práv (juris utriusque doctor) patří mezi tzv. malé doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "JUDr." + "</p>"
                 break;
