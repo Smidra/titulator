@@ -69,26 +69,56 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "drsc":
                 detailtext += "<i>Doktor věd (doctor scientiarum) byla vyšší vědecká hodnost (ISCED 8). Dnes částečně nahrazena neoficiálním titulem DSc.</i>" + "<p><b>Titul:</b>    " + "DrSc." + "</p>"
                 break;
-
-            /*
-            case "dr":
-                detailtext += "<i></i>" + "<p><b>Titul:</b>    " + "Dr." + "</p>"
-                break;
             
+            case "thd":
+                detailtext += "<i>Doktor teologie (theologiae doctor) byla vyšší vědecká hodnost (ISCED 8). Nyní nahrazeno ThDr. nebo Ph.D.</i>" + "<p><b>Titul:</b>    " + "Th.D." + "</p>"
+                break;
 
             // 7 + rigorozni + minulost 
             case "akadarch":
-            case "akmal":
-            case "aksoch":
-            case "msdr":
-            case "paedr":
-            case "phmr":
-            case "rcdr":
-            case "rtdr":
-            case "thmgr":
-                detailtext += "<i>Malý doktorát byl akademicko-vědecký titul udělen po složení rigorózní zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + slovo + "</p>"
+                detailtext += "<i>Akademický architekt byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "ak. arch." + "</p>"
                 break;
-            */
+
+            case "akmal":
+                detailtext += "<i>Akademický malíř byl akademicko-vědecký titul (ISCED 7). Byl nahrazen titulem MgA.</i>" + "<p><b>Titul:</b>    " + "ak. mal." + "</p>"
+                break;
+
+            case "aksoch":
+                detailtext += "<i>Akademický sochař byl akademicko-vědecký titul (ISCED 7). Také se uděluje absoloventům akdemie sochařství.</i>" + "<p><b>Titul:</b>    " + "ak. soch." + "</p>"
+                break;
+            
+            case "msdr":
+                detailtext += "<i>Doktor zubního lékařství (medicinae stomatologicae doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "MSDr." + "</p>"
+                break;
+
+            case "paedr":
+                detailtext += "<i>Doktor pedagogiky (paedagogiae doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "PaedDr." + "</p>"
+                break;
+
+            case "rcdr":
+                detailtext += "<i>Doktor obchodních věd (rerum commercialium doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "RCDr." + "</p>"
+                break;
+
+            case "rsdr":
+                detailtext += "<i>Doktor sociálně-politických věd (rerum socialium doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "RSDr." + "</p>"
+                break;
+
+            case "rtdr":
+                detailtext += "<i>Doktor technických věd (rerum technicarum doctor) byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "RTDr." + "</p>"
+                break;
+
+            case "dr":
+                detailtext += "<i>Doktor byla zkrácená verze akademicko-vědeckých titulů (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Dr." + "</p>"
+                break;    
+
+            case "phmr":
+                detailtext += "<i>Magistr farmacie (pharmaciae magister) byl akademicko-vědecký magisterský titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "PhMr." + "</p>"
+                break;
+
+            case "thmgr":
+                detailtext += "<i>Magistr teologie byl akademicko-vědecký magisterský titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "ThMgr." + "</p>"
+                break;
+
             // 7 + rigorozni + soucasnost
             case "mudr":
                 detailtext += "<i>Doktor medicíny (medicinae universae doctor) patří mezi tzv. profesní doktoráty (ISCED 7). Získán složením rigorózní zkoušky.</i>" + "<p><b>Titul:</b>    " + "MUDr." + "</p>"
@@ -127,7 +157,10 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 break;
             
             // 7 + soucasnost
-            case "ingarch":
+            case "ingarch": 
+                detailtext += "<i>Inženýr architekt je akademicko-vědecký titul udělený po obhájení diplomové práce a složení státní závěrečné zkoušky (ISCED 7). Můžeme oslovovat i 'pane architekte'.</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
+                break;
+
             case "ing":
                 detailtext += "<i>Inženýr je akademicko-vědecký titul udělený po obhájení diplomové práce a složení státní závěrečné zkoušky (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "Ing.  " + "</p>"
                 break;

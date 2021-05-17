@@ -83,7 +83,7 @@ function vymysliOsloveni(nameArray, isWoman) {
     docentArr = ["doc", "docent"]
     doktorArr = ["phd", "thd", "phdr", "judr", "rndr", "pharmdr", "thdr", "mudr", "mddr", "mvdr", "paeddr", "msdr", "rcdr", "rsdr", "rtdr"]
     inzenyrArr = ["ing", "ingarch"]
-    magistrArr = ["mgr", "mga", "phmr"]
+    magistrArr = ["mgr", "mga", "phmr", "thmgr"]
     licencArr = ["thlic"]
     bakalarArr = ["bc", "bca"]
 

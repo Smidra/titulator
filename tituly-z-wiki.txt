@@ -6,9 +6,9 @@ MUC.
     Bc.
     BcA.
 
-7 současnost
-Ing.
-Ing. arch.
+    7 současnost
+    Ing.
+    Ing. arch.
     MgA.
     Mgr.
 
@@ -16,7 +16,7 @@ Ing. arch.
     MDDr.
     MVDr.
 
-7 + rigorozni současnost
+    7 + rigorozni současnost
     JUDr.
     PhDr.
     RNDr.
@@ -24,22 +24,22 @@ Ing. arch.
     ThLic.
     ThDr.
 
-7 + rigorozni minulost
-akad. arch.
-ak. mal.
-ak. soch.
-MSDr.
-PaedDr.
-PhMr.
-RCDr.
-RTDr.
-ThMgr.
+    7 + rigorozni minulost
+    akad. arch.
+    ak. mal.
+    ak. soch.
+    MSDr.
+    PaedDr.
+    PhMr.
+    RCDr.
+    RTDr.
+    ThMgr.
 
 8 minulost?
     CSc.
     DrSc.
-Dr.
-Th.D.
+    Dr.
+    Th.D.
 
     8 současnost
     Ph.D.
