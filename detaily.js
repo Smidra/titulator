@@ -20,6 +20,17 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
     // Projeď tituly a vypiš co k nim víš
     for (slovo of nameArray) {
         switch (slovo) {
+            // Zahraniční tituly
+            case "mba":
+            case "msc":
+            case "ma":
+                detailtext += "<i>Zahraniční magisterský titul. V ČR netitulujeme.</i>" + "<p><b>Titul:</b>    " + "MA" + "</p>"
+                break;
+
+            case "ba":
+                detailtext += "<i>Zahraniční bakalářský titul. V ČR netitulujeme.</i>" + "<p><b>Titul:</b>    " + "BA" + "</p>"
+                break;
+
             // Čestné tituly
             case "profhc":
                 detailtext += "<i>Čestná profesura (professor honoris causa). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "prof. h. c." + "</p>"
@@ -29,9 +40,18 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 detailtext += "<i>Čestný doktorát (doctor honoris causa). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "dr. h. c." + "</p>"
                 break;
             
-            // Neakademické tituly
+            // Neakademické tituly + divnotituly
             case "dis":
                 detailtext += "<i>Neakademický titul diplomovaný specialista. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "DiS." + "</p>"
+                break;
+            
+            case "freng":
+            case "feng":
+                detailtext += "<i>Neakademický titul člena britské Royal Academy of Engineering (Fellowship of the Royal Academy of Engineering).</i>" + "<p><b>Titul:</b>    " + "FEng." + "</p>"
+                break;
+            
+            case "muc":
+                detailtext += "<i>Medicinae universae candidatus je student medicíny, který dokončil alespoň 6 semestrů výuky.</i>" + "<p><b>Titul:</b>    " + "MUC." + "</p>"
                 break;
 
             // Věděcko-pedagogické tituly

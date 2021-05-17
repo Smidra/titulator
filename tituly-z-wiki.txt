@@ -1,6 +1,6 @@
---Jiné tituly--
-FEng.
-MUC.
+    --Jiné tituly--
+    FEng.
+    MUC.
 
     6 současnost
     Bc.
@@ -35,7 +35,7 @@ MUC.
     RTDr.
     ThMgr.
 
-8 minulost?
+    8 minulost?
     CSc.
     DrSc.
     Dr.
