@@ -1,0 +1,19 @@
+window.console=window.console||(function(){var c={};c.log=c.warn=c.debug=c.info=c.error=c.time=c.dir=c.profile=c.clear=c.exception=c.trace=c.assert=function(){};return c;})();setTimeout(function(){var cookie1='cookie1',cookie2='cookie2';var cookie2url='https://cdn.muni.cz/mvcscripts/libs/cookiebar/1.0/cookie2.js?l=cs&ga=ga&gid=%3cG-PYQFFKLY69&t=light&m=oo&cn=mu-cookie-consent';var deleteCookies=true;var cookieConsentName='mu-cookie-consent',gaid='&lt;G-PYQFFKLY69';var url='';window.customCookies=window.customCookies||[];window.customCookies.push({name:cookieConsentName,expires:'1y',marketing:false,description:{cs:'Používá se k zapamatování volby odpovědi na informační lištu o cookies.',en:"Stores the user's cookie consent state."}});if(!navigator.cookieEnabled){return;}
+subscribe(document,'click',function(e){var target=getEventTarget(e);if(target.tagName.toLowerCase()==='a'&&endsWith(target.href,'#cookiebar')){e.preventDefault?e.preventDefault():(e.returnValue=false);enableCookieBar();}});var value=getCookieValue(cookieConsentName);if(value===null){enableCookieBar();}
+if(deleteCookies&&parseInt(value)===0){declineCookies(cookieConsentName,gaid,url);}
+function enableCookieBar(){var cookie2script=document.getElementById(cookie2);if(!cookie2script){cookie2script=document.createElement('script');cookie2script.setAttribute('type','text/javascript');cookie2script.setAttribute('src',cookie2url);cookie2script.setAttribute('id',cookie2);var head=document.head||document.getElementsByTagName("head")[0];head.appendChild(cookie2script);}else{window.cookiebar();}}
+function getCookieValue(name){var pattern=RegExp(name+"=.[^;]*");var matched=document.cookie.match(pattern);if(matched){var cookie=matched[0].split('=')
+return cookie[1]}
+return null;}},0);function getCookieData(url,callback,always){always=always||function(){};if(!url){always();return;}
+var xhr;if(!!window.XMLHttpRequest){xhr=new XMLHttpRequest();}
+else if(!!window.XDomainRequest){xhr=new XDomainRequest();}else{console.log('Cookiebar: cannot make AJAX request');return;}
+xhr.onreadystatechange=function(){if(xhr.readyState===xhr.DONE){if(xhr.status===200){var data=JSON.parse(xhr.responseText);callback(data);}else{console.error('Cookiebar: Error receiving data.');}
+always();}}
+xhr.ontimeout=function(){console.error('Cookiebar: Request timedout.');}
+xhr.open('GET',url);xhr.send();}
+function declineCookies(cookieConsentName,gaid,url){if(gaid){window['ga-disable-'+gaid]=true;}
+window.cookiebar=window.cookiebar||{};window.cookiebar.cookies=(window.cookiebar.cookies||[]).concat([{name:'__utma',expires:'2y',marketing:true},{name:'__utmt',expires:'10m',marketing:true},{name:'__utmb',expires:'30m',marketing:true},{name:'__utmc',expires:'',marketing:true},{name:'__utmz',expires:'6M',marketing:true},{name:'__utmv',expires:'2y',marketing:true}]);var cookies=[];if(window.cookiebar.cookies){cookies=cookies.concat(window.cookiebar.cookies);}
+if(window.customCookies){cookies=cookies.concat(window.customCookies);}
+var yesterday=new Date();yesterday.setTime(yesterday.getTime()-(24*60*60*1000));getCookieData(url,function(data){cookies=cookies.concat(data);},function(){for(var i=0;i<cookies.length;i++){var cookie=cookies[i];if(cookie.marketing&&cookieConsentName!==cookie.name){document.cookie=cookie.name+'=; expires='+yesterday.toUTCString()+'; path=/';}}});}
+function getEventTarget(e){e=e||window.event;return e.target||e.srcElement;}
+function endsWith(source,suffix){return source.indexOf(suffix,source.length-suffix.length)!==-1;};function subscribe(element,event,func){element.addEventListener(event,func,false);}
