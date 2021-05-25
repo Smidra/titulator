@@ -61,15 +61,6 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="./signin.css" rel="stylesheet">
   <script src="./bootstrap.bundle.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-  <script>
-    $(document).ready(function () {
-      $("#oslovit").on('click touchstart', function () {
-        oslovuj()
-      });
-    });
-  </script>
 
 </head>
 
@@ -90,7 +81,7 @@
     </br>
     <!-- Tlačítko oslovit -->
     <div class="d-grid gap-2">
-      <button id="oslovit" class="btn btn-lg btn-primary btn-block" style="cursor:pointer; z-index: 99;">
+      <button id="oslovit" class="btn btn-lg btn-primary btn-block" style="cursor:pointer; z-index: 99;" onclick="oslovuj()">
         oslovit
       </button>
     </div>
