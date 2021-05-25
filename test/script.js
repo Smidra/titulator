@@ -13,11 +13,16 @@ function zavri() {
     document.getElementById("karta").hidden = true;
 }
 
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
 function vycisti(jmeno_vstup) {
     // Vycisti '.' a ',' split do pole
     var nameClean = String(jmeno_vstup);
-    nameClean = nameClean.replace(/./g, ' ');
+    nameClean = nameClean.replaceAll('.', ' ');
     return nameClean;
 
     nameClean = nameClean.replaceAll(',', ' ');
