@@ -156,10 +156,10 @@ function oslovuj() {
 
 // Poslouchej na tlačítko enter
 // Sauce https://stackoverflow.com/questions/155188/trigger-a-button-click-with-javascript-on-the-enter-key-in-a-text-box
-var input = document.getElementById("inputName");
-input.addEventListener("keyup", function (event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        document.getElementById("oslovit").click();
-    }
-});
+// var input = document.getElementById("inputName");
+// input.addEventListener("keyup", function (event) {
+//     if (event.key === 'Enter') {
+//         event.preventDefault();
+//         document.getElementById("oslovit").click();
+//     }
+// });
