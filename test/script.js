@@ -128,7 +128,7 @@ function vymysliOsloveni(nameArray, isWoman) {
 function oslovuj() {
     // var name = document.getElementById("inputName").value;
     var name = document.getElementById('inputName') ? document.getElementById('inputName').value : 'bad shit happened';
-    var nameClean = vycisti(name)
+    // var nameClean = vycisti(name)
     // var nameArray = nameClean.split(/ +/);
     // var isWoman = jeZena(nameClean)
 
@@ -146,7 +146,7 @@ function oslovuj() {
     // }
 
     // Nastav a zobraz
-    document.getElementById("dopis").innerHTML = nameClean;
+    document.getElementById("dopis").innerHTML = name;
     document.getElementById("karta").hidden = false
 }
 
