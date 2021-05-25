@@ -156,8 +156,10 @@ function oslovuj() {
     // }
     if ( test == "asdf"){
         console.log("A")
+        document.getElementById("dopis").innerHTML = test;
     }else{
         console.log("B")
+        document.getElementById("dopis").innerHTML = test;
     }
     document.getElementById("karta").hidden = false
 }
