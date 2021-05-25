@@ -131,8 +131,10 @@ function oslovuj() {
     console.log(name)
     var nameClean = vycisti(name)
     console.log(nameClean)
-    // var nameArray = nameClean.split(/ +/);
-    // var isWoman = jeZena(nameClean)
+    var nameArray = nameClean.split(/ +/);
+    var isWoman = jeZena(nameClean)
+    console.log(nameArray)
+    console.log(isWoman)
 
     // // Zkus oslovit akad. funkci
     // var osloveni_s_funkci = vymysliFunkci(isWoman)
