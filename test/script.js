@@ -6,16 +6,16 @@ function odoznac() {
     document.getElementById("inlineRadioProrektor").checked = false;
     document.getElementById("inlineRadioDekan").checked = false;
     document.getElementById("inlineRadioProdekan").checked = false;
-
 }
 
 // Zavři okno s výsledkem
 function zavri() {
-    document.getElementById("karta").hidden = true
+    document.getElementById("karta").hidden = true;
 }
 
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
 function vycisti(jmeno_vstup) {
+    return jmeno_vstup;
     // Vycisti '.' a ',' split do pole
     nameClean = jmeno_vstup.toString();
     nameClean = nameClean.replaceAll(".", ' ');
@@ -128,9 +128,10 @@ function vymysliOsloveni(nameArray, isWoman) {
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
     // var name = document.getElementById("inputName").value;
-    var name = document.getElementById('inputName') ? document.getElementById('inputName').value : "bad shit happened";
+    var name = document.getElementById('inputName').value;
+    console.log(name);
     if (typeof name == 'undefined'){
-        var name = "LlL";
+        var name = "Nefunguje";
     }
     var nameClean = vycisti(name);
     // var nameArray = nameClean.split(/ +/);
