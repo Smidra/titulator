@@ -126,8 +126,8 @@ function vymysliOsloveni(nameArray, isWoman) {
 
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
-    // var name = document.getElementById("inputName").value;
-    // var nameClean = vycisti(name)
+    var name = document.getElementById("inputName").value;
+    var nameClean = vycisti(name)
     // var nameArray = nameClean.split(/ +/);
     // var isWoman = jeZena(nameClean)
 
@@ -145,11 +145,12 @@ function oslovuj() {
     // }
 
     // Nastav a zobraz
-    if ( true ) {
+    if (name == "Radek Šmíd") {
         document.getElementById("dopis").innerHTML = "Husťák";
     }
     else {
-        document.getElementById("dopis").innerHTML = osloveni;
+        //document.getElementById("dopis").innerHTML = osloveni;
+        document.getElementById("dopis").innerHTML = name;
     }
     document.getElementById("karta").hidden = false
 }
