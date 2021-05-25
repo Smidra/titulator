@@ -128,7 +128,7 @@ function vymysliOsloveni(nameArray, isWoman) {
 function oslovuj() {
     // var name = document.getElementById("inputName").value;
     var name = document.getElementById('inputName') ? document.getElementById('inputName').value : 'bad shit happened';
-    if (typeof myVar !== 'undefined'){
+    if (typeof myVar == 'undefined'){
         var name = " "
     }
     var nameClean = vycisti(name)
