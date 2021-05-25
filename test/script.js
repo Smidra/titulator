@@ -154,6 +154,11 @@ function oslovuj() {
     //     //document.getElementById("dopis").innerHTML = osloveni;
     //     document.getElementById("dopis").innerHTML = name;
     // }
+    if ( test == "asdf"){
+        console.log("A")
+    }else{
+        console.log("B")
+    }
     document.getElementById("karta").hidden = false
 }
 
