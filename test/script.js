@@ -127,8 +127,8 @@ function vymysliOsloveni(nameArray, isWoman) {
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
     var test = "asdf"
-    //var name = document.getElementById("inputName").value;
-    // console.log(name)
+    var name = document.getElementById("inputName").value;
+    console.log(name)
     // var nameClean = vycisti(name)
     // var nameArray = nameClean.split(/ +/);
     // var isWoman = jeZena(nameClean)
