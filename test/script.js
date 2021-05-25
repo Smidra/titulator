@@ -136,7 +136,7 @@ function oslovuj() {
     console.log(nameArray)
     console.log(isWoman)
 
-    // // Zkus oslovit akad. funkci
+    // Zkus oslovit akad. funkci
     // var osloveni_s_funkci = vymysliFunkci(isWoman)
     // var osloveni = osloveni_s_funkci[0]
     // var funkce = osloveni_s_funkci[1]
@@ -150,20 +150,20 @@ function oslovuj() {
     // }
 
     // Nastav a zobraz
-    // if (name == 10) {
-    //     document.getElementById("dopis").innerHTML = "Husťák";
-    // }
-    // else {
-    //     //document.getElementById("dopis").innerHTML = osloveni;
-    //     document.getElementById("dopis").innerHTML = name;
-    // }
-    if ( test == "asdf"){
-        console.log("A")
-        document.getElementById("dopis").innerHTML = test;
-    }else{
-        console.log("B")
-        document.getElementById("dopis").innerHTML = test;
+    if (name == 10) {
+        document.getElementById("dopis").innerHTML = "Husťák";
     }
+    else {
+        //document.getElementById("dopis").innerHTML = osloveni;
+        document.getElementById("dopis").innerHTML = name;
+    }
+    // if ( test == "asdf"){
+    //     console.log("A")
+    //     document.getElementById("dopis").innerHTML = test;
+    // }else{
+    //     console.log("B")
+    //     document.getElementById("dopis").innerHTML = test;
+    // }
     document.getElementById("karta").hidden = false
 }
 
