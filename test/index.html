@@ -28,8 +28,6 @@
     window.customCookiesTitle = '<p>Pro správnou funkci tohoto webu a jeho další zlepšování používáme soubory cookies.</p>';
     window.customCookiesText = '<h4>Text...</h4>';
   </script> -->
-  <script id="cookie1" type="text/javascript" src="./cookie1.js">
-  </script>
 
   <!-- Google adsence -->
   <!-- <script data-ad-client="ca-pub-3975703332572140" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
@@ -61,6 +59,13 @@
     integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link href="./signin.css" rel="stylesheet">
   <script src="./bootstrap.bundle.min.js"></script>
+  <script id="cookie1" type="text/javascript" src="./cookie1.js"></script>
+  <script>
+    function testingFunc() {
+      // document.getElementById("dopis").innerHTML = "Husťák";
+      document.getElementById("karta").hidden = false
+    }
+  </script>
 
 </head>
 
@@ -83,8 +88,8 @@
     <div class="d-grid gap-2">
 
       <button id="oslovit" class="btn btn-lg btn-primary btn-block" style="cursor:pointer; z-index: 99;"
-        onclick="oslovuj()" ontouchstart="oslovuj()" onmousedown="oslovuj()">
-        oslovit
+        onclick="testingFunc()" ontouchstart="testingFunc()" onmousedown="testingFunc()">
+        oslovit - testingFunc
       </button>
     </div>
 
