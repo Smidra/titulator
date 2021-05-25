@@ -129,7 +129,8 @@ function oslovuj() {
     var test = "asdf"
     var name = document.getElementById("inputName").value;
     console.log(name)
-    // var nameClean = vycisti(name)
+    var nameClean = vycisti(name)
+    console.log(nameClean)
     // var nameArray = nameClean.split(/ +/);
     // var isWoman = jeZena(nameClean)
 
