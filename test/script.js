@@ -150,7 +150,7 @@ function oslovuj() {
 
     // Nastav a zobraz
     //document.getElementById("dopis").innerHTML = osloveni;
-    document.getElementById("dopis").innerHTML = "Husty";
+    // document.getElementById("dopis").innerHTML = "Husty";
     // if ( test == "asdf"){
     //     console.log("A")
     //     document.getElementById("dopis").innerHTML = test;
