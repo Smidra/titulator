@@ -138,24 +138,24 @@ function oslovuj() {
         var name = "Nefunguje";
     }
     var nameClean = vycisti(name);
-    // var nameArray = nameClean.split(/ +/);
-    // var isWoman = jeZena(nameClean)
+    var nameArray = nameClean.split(/ +/);
+    var isWoman = jeZena(nameClean)
 
-    // // Zkus oslovit akad. funkci
-    // var osloveni_s_funkci = vymysliFunkci(isWoman)
-    // var osloveni = osloveni_s_funkci[0]
-    // var funkce = osloveni_s_funkci[1]
-    // if (osloveni == "") {
-    //     // Nemel akad fci, oslovujeme tituly
-    //     osloveni = vymysliOsloveni(nameArray, isWoman)
-    //     nastavDetail(nameArray, isWoman, false, funkce)
-    // } else {
-    //     // Mel akad fci, neoslovujeme tituly
-    //     nastavDetail(nameArray, isWoman, true, funkce)
-    // }
+    // Zkus oslovit akad. funkci
+    var osloveni_s_funkci = vymysliFunkci(isWoman)
+    var osloveni = osloveni_s_funkci[0]
+    var funkce = osloveni_s_funkci[1]
+    if (osloveni == "") {
+        // Nemel akad fci, oslovujeme tituly
+        osloveni = vymysliOsloveni(nameArray, isWoman)
+        nastavDetail(nameArray, isWoman, false, funkce)
+    } else {
+        // Mel akad fci, neoslovujeme tituly
+        nastavDetail(nameArray, isWoman, true, funkce)
+    }
 
     // Nastav a zobraz
-    document.getElementById("dopis").innerHTML = nameClean;
+    document.getElementById("dopis").innerHTML = osloveni;
     document.getElementById("karta").hidden = false;
 }
 
