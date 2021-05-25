@@ -150,13 +150,8 @@ function oslovuj() {
     // }
 
     // Nastav a zobraz
-    if (name == 10) {
-        document.getElementById("dopis").innerHTML = "Husťák";
-    }
-    else {
-        //document.getElementById("dopis").innerHTML = osloveni;
-        document.getElementById("dopis").innerHTML = name;
-    }
+    //document.getElementById("dopis").innerHTML = osloveni;
+    document.getElementById("dopis").innerHTML = name;
     // if ( test == "asdf"){
     //     console.log("A")
     //     document.getElementById("dopis").innerHTML = test;
