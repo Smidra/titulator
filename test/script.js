@@ -17,9 +17,9 @@ function zavri() {
 function vycisti(jmeno_vstup) {
     // Vycisti '.' a ',' split do pole
     var nameClean = String(jmeno_vstup);
-    nameClean = nameClean.replaceAll('.', ' ');
+    nameClean = nameClean.replace(/./g, ' ');
     return nameClean;
-    
+
     nameClean = nameClean.replaceAll(',', ' ');
     nameClean = nameClean.replaceAll('	', ' ');
     nameClean = nameClean.toLowerCase();
