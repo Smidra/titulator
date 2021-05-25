@@ -126,7 +126,7 @@ function vymysliOsloveni(nameArray, isWoman) {
 
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
-    var name = "RADEK"
+    var name = 10
     // var name = document.getElementById("inputName").value;
     // var nameClean = vycisti(name)
     // var nameArray = nameClean.split(/ +/);
@@ -146,7 +146,7 @@ function oslovuj() {
     // }
 
     // Nastav a zobraz
-    if (name == "Radek Šmíd") {
+    if (name == 10) {
         document.getElementById("dopis").innerHTML = "Husťák";
     }
     else {
