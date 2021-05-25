@@ -126,7 +126,8 @@ function vymysliOsloveni(nameArray, isWoman) {
 
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
-    var name = document.getElementById("inputName").value;
+    // var name = document.getElementById("inputName").value;
+    var name = document.getElementById('inputName') ? document.getElementById('inputName').value : 'bad shit happened';
     document.getElementById("dopis").innerHTML = name;
     document.getElementById("karta").hidden = false
 
