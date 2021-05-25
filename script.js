@@ -1,3 +1,9 @@
+// Verte nebo ne, nektere prohlizece neumi replaceAll()
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.split(search).join(replacement);
+};
+
 // Odoznaci vsechny radio buttons
 function odoznac() {
     document.getElementById("inlineRadioMuz").checked = false;
