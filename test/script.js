@@ -16,11 +16,11 @@ function zavri() {
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
 function vycisti(jmeno_vstup) {
     // Vycisti '.' a ',' split do pole
-    var nameClean = jmeno_vstup;
+    var nameClean = String(jmeno_vstup);
+    return nameClean;
     nameClean = nameClean.replaceAll('.', ' ');
     nameClean = nameClean.replaceAll(',', ' ');
     nameClean = nameClean.replaceAll('	', ' ');
-    return nameClean;
     nameClean = nameClean.toLowerCase();
     // Nahradit tituly rozdelene teckou bezteckovou variantou
     nameClean = nameClean.replaceAll('ph d', 'phd');
