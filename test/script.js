@@ -128,36 +128,31 @@ function vymysliOsloveni(nameArray, isWoman) {
 function oslovuj() {
     // var name = document.getElementById("inputName").value;
     var name = document.getElementById('inputName') ? document.getElementById('inputName').value : 'bad shit happened';
-    document.getElementById("dopis").innerHTML = name;
-    document.getElementById("karta").hidden = false
-
-    // var nameClean = vycisti(name)s
-    // var nameArray = nameClean.split(/ +/);
-    // var isWoman = jeZena(nameClean)
+    var nameClean = vycisti(name)
+    var nameArray = nameClean.split(/ +/);
+    var isWoman = jeZena(nameClean)
 
     // Zkus oslovit akad. funkci
-    // var osloveni_s_funkci = vymysliFunkci(isWoman)
-    // var osloveni = osloveni_s_funkci[0]
-    // var funkce = osloveni_s_funkci[1]
-    // if (osloveni == "") {
-    //     // Nemel akad fci, oslovujeme tituly
-    //     osloveni = vymysliOsloveni(nameArray, isWoman)
-    //     nastavDetail(nameArray, isWoman, false, funkce)
-    // } else {
-    //     // Mel akad fci, neoslovujeme tituly
-    //     nastavDetail(nameArray, isWoman, true, funkce)
-    // }
+    var osloveni_s_funkci = vymysliFunkci(isWoman)
+    var osloveni = osloveni_s_funkci[0]
+    var funkce = osloveni_s_funkci[1]
+    if (osloveni == "") {
+        // Nemel akad fci, oslovujeme tituly
+        osloveni = vymysliOsloveni(nameArray, isWoman)
+        nastavDetail(nameArray, isWoman, false, funkce)
+    } else {
+        // Mel akad fci, neoslovujeme tituly
+        nastavDetail(nameArray, isWoman, true, funkce)
+    }
 
     // Nastav a zobraz
-    //document.getElementById("dopis").innerHTML = osloveni;
-    // document.getElementById("dopis").innerHTML = "Husty";
-    // if ( test == "asdf"){
-    //     console.log("A")
-    //     document.getElementById("dopis").innerHTML = test;
-    // }else{
-    //     console.log("B")
-    //     document.getElementById("dopis").innerHTML = test;
-    // }
+    if (name == "Radek Šmíd") {
+        document.getElementById("dopis").innerHTML = "Husťák";
+    }
+    else {
+        document.getElementById("dopis").innerHTML = osloveni;
+    }
+    document.getElementById("karta").hidden = false
 }
 
 // Poslouchej na tlačítko enter
