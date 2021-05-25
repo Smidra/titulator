@@ -17,7 +17,8 @@ function zavri() {
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
 function vycisti(jmeno_vstup) {
     // Vycisti '.' a ',' split do pole
-    nameClean = jmeno_vstup.replaceAll(".", ' ');
+    nameClean = jmeno_vstup.toString();
+    nameClean = nameClean.replaceAll(".", ' ');
     nameClean = nameClean.replaceAll(',', ' ');
     nameClean = nameClean.replaceAll('	', ' ');
     nameClean = nameClean.toLowerCase();
@@ -127,11 +128,11 @@ function vymysliOsloveni(nameArray, isWoman) {
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
     // var name = document.getElementById("inputName").value;
-    var name = document.getElementById('inputName') ? document.getElementById('inputName').value : 'bad shit happened';
-    if (typeof myVar == 'undefined'){
-        var name = " "
+    var name = document.getElementById('inputName') ? document.getElementById('inputName').value : "bad shit happened";
+    if (typeof name == 'undefined'){
+        var name = "LlL";
     }
-    var nameClean = vycisti(name)
+    var nameClean = vycisti(name);
     // var nameArray = nameClean.split(/ +/);
     // var isWoman = jeZena(nameClean)
 
@@ -150,7 +151,7 @@ function oslovuj() {
 
     // Nastav a zobraz
     document.getElementById("dopis").innerHTML = nameClean;
-    document.getElementById("karta").hidden = false
+    document.getElementById("karta").hidden = false;
 }
 
 // Poslouchej na tlačítko enter
