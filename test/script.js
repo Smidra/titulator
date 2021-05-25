@@ -126,10 +126,11 @@ function vymysliOsloveni(nameArray, isWoman) {
 
 // Provede cely skript. Upravi html s novou hodnotou osloveni.
 function oslovuj() {
-    // var name = document.getElementById("inputName").value;
-    document.getElementById("dopis").innerHTML = "Ahoj";
+    var name = document.getElementById("inputName").value;
+    document.getElementById("dopis").innerHTML = name;
+    document.getElementById("karta").hidden = false
 
-    // var nameClean = vycisti(name)
+    // var nameClean = vycisti(name)s
     // var nameArray = nameClean.split(/ +/);
     // var isWoman = jeZena(nameClean)
 
@@ -156,7 +157,6 @@ function oslovuj() {
     //     console.log("B")
     //     document.getElementById("dopis").innerHTML = test;
     // }
-    document.getElementById("karta").hidden = false
 }
 
 // Poslouchej na tlačítko enter
