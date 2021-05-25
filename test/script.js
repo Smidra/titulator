@@ -149,7 +149,7 @@ function oslovuj() {
     // }
 
     // Nastav a zobraz
-    document.getElementById("dopis").innerHTML = name;
+    document.getElementById("dopis").innerHTML = nameClean;
     document.getElementById("karta").hidden = false
 }
 
