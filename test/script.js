@@ -16,8 +16,8 @@ function zavri() {
 // Vycisti string od nealfanumerickych znaku a prevede ho na lowercase
 function vycisti(jmeno_vstup) {
     // Vycisti '.' a ',' split do pole
-    nameClean = jmeno_vstup.toString();
-    nameClean = nameClean.replaceAll(".", ' ');
+    nameClean = jmeno_vstup
+    nameClean = nameClean.replaceAll('.', ' ');
     nameClean = nameClean.replaceAll(',', ' ');
     nameClean = nameClean.replaceAll('	', ' ');
     return nameClean;
