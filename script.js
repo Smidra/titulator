@@ -43,6 +43,7 @@ function vycisti(jmeno_vstup) {
     nameClean = nameClean.replaceAll('M A', 'ma');
     nameClean = nameClean.replaceAll('M B A', 'mba');
     nameClean = nameClean.replaceAll('B A', 'ba');
+    nameClean = nameClean.replaceAll('dr  habil', 'drhabil');
     nameClean = nameClean.replaceAll('dr habil', 'drhabil');
     return nameClean
 }
