@@ -36,6 +36,11 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 break;
 
             // Čestné tituly
+            case "mult":
+            case "multiplex":
+                detailtext += "<i>Značí, že příjemce má více čestných doktorátů. Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "mult." + "</p>"
+                break;
+
             case "profhc":
                 detailtext += "<i>Čestná profesura (professor honoris causa). Netitulujeme.</i>" + "<p><b>Titul:</b>    " + "prof. h. c." + "</p>"
                 break;
