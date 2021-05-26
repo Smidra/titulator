@@ -32,7 +32,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 break;
 
             case "drhabil":
-                detailtext += "<i>Německá varianta docenta. Asi spíš titulujeme, protože zahraniční profesory taky tituluje jako profesory.</i>" + "<p><b>Titul:</b>    " + "Dr. habil." + "</p>"
+                detailtext += "<i>Německá varianta docenta. Titulujeme, protože zahraniční profesory taky tituluje jako profesory. Občas se využívá PD jako Privatdozent</i>" + "<p><b>Titul:</b>    " + "Dr. habil." + "</p>"
                 break;
 
             // Čestné tituly
