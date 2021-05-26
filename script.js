@@ -43,6 +43,7 @@ function vycisti(jmeno_vstup) {
     nameClean = nameClean.replaceAll('M A', 'ma');
     nameClean = nameClean.replaceAll('M B A', 'mba');
     nameClean = nameClean.replaceAll('B A', 'ba');
+    nameClean = nameClean.replaceAll('dr habil', 'drhabil');
     return nameClean
 }
 
@@ -89,7 +90,7 @@ function vymysliOsloveni(nameArray, isWoman) {
 
     // --- Pole možných titulů ---
     profesorArr = ["prof", "profesor"]
-    docentArr = ["doc", "docent"]
+    docentArr = ["doc", "docent", "drhabil"]
     doktorArr = ["drsc","dsc", "phd", "thd", "phdr", "judr", "rndr", "pharmdr", "thdr", "mudr", "mddr", "mvdr", "paeddr", "msdr", "rcdr", "rsdr", "rtdr", "dr"]
     inzenyrArr = ["ing", "ingarch"]
     magistrArr = ["mgr", "mga", "phmr", "thmgr"]
