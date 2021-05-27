@@ -40,9 +40,9 @@ function vycisti(jmeno_vstup) {
     nameClean = nameClean.replaceAll('prof  h  c', 'profhc');
     nameClean = nameClean.replaceAll('odb as', 'odbas');
     nameClean = nameClean.replaceAll('odb  as', 'odbas');
-    nameClean = nameClean.replaceAll('M A', 'ma');
-    nameClean = nameClean.replaceAll('M B A', 'mba');
-    nameClean = nameClean.replaceAll('B A', 'ba');
+    nameClean = nameClean.replaceAll('m a', 'ma');
+    nameClean = nameClean.replaceAll('m b a', 'mba');
+    nameClean = nameClean.replaceAll('b a', 'ba');
     nameClean = nameClean.replaceAll('dr  habil', 'drhabil');
     nameClean = nameClean.replaceAll('dr habil', 'drhabil');
     nameClean = nameClean.replaceAll('dr  phil  habil', 'drhabil');
