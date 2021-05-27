@@ -24,7 +24,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "mba":
             case "msc":
             case "ma":
-                detailtext += "<i>Zahraniční magisterský titul. V ČR netitulujeme.</i>" + "<p><b>Titul:</b>    " + "MA" + "</p>"
+                detailtext += "<i>Zahraniční magisterský titul. V ČR netitulujeme.</i>" + "<p><b>Titul:</b>    " + "MSc / MA / MBA" + "</p>"
                 break;
 
             case "ba":
