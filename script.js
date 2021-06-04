@@ -109,6 +109,23 @@ function vymysliOsloveni(nameArray, isWoman) {
     licenc = nameArray.some(r => licencArr.includes(r))
     bakalar = nameArray.some(r => bakalarArr.includes(r))
 
+    // Ktery titul ISCED7 byl nejdřív? Magistr/Inzenyr?
+    var inzenyrPreference = true;
+    var arrayLength = nameArray.length;
+    for( var i = 0; i<arrayLength; i++ ){
+        console.log(nameArray[i])
+        firstMagistr = magistrArr.includes(nameArray[i]);
+        firstInzenyr = inzenyrArr.includes(nameArray[i]);
+        if(firstMagistr != false){
+            inzenyrPreference = false
+            break
+        }
+        if(firstInzenyr != false){
+            inzenyrPreference = true
+            break
+        }
+    }
+
     // Vymysli osloveni z hierarchie
     if (profesor) {
         if (isWoman) { osloveni = "Vážená paní profesorko," } else { osloveni = "Vážený pane profesore," }
@@ -119,11 +136,12 @@ function vymysliOsloveni(nameArray, isWoman) {
     else if (doktor) {
         if (isWoman) { osloveni = "Vážená paní doktorko," } else { osloveni = "Vážený pane doktore," }
     }
-    else if (inzenyr) {
-        if (isWoman) { osloveni = "Vážená paní inženýrko," } else { osloveni = "Vážený pane inženýre," }
-    }
-    else if (magistr) {
-        if (isWoman) { osloveni = "Vážená paní magistro," } else { osloveni = "Vážený pane magistře," }
+    else if (inzenyr || magistr) {
+        if (inzenyrPreference){
+            if (isWoman) { osloveni = "Vážená paní inženýrko," } else { osloveni = "Vážený pane inženýre," }
+        }else{
+            if (isWoman) { osloveni = "Vážená paní magistro," } else { osloveni = "Vážený pane magistře," }
+        }
     }
     //else if (licenc) {
     //    if (isWoman) { osloveni = "Vážená paní licenciátko," } else { osloveni = "Vážený pane licenciáte," }
