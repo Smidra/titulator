@@ -2,4 +2,5 @@ Level 3
 =======
 Zakódujte následující text pomocí ASCII tabulky a předejte mi výsledná čísla.
 
-The End?
+Text k zakódování mezi uvozovkami:
+"The End?"
