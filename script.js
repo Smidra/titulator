@@ -94,7 +94,7 @@ function vymysliOsloveni(nameArray, isWoman) {
     // --- Pole možných titulů ---
     profesorArr = ["prof", "profesor"]
     docentArr = ["doc", "docent", "drhabil"]
-    doktorArr = ["drsc","dsc", "phd", "thd", "phdr", "judr", "rndr", "pharmdr", "thdr", "mudr", "mddr", "mvdr", "paeddr", "msdr", "rcdr", "rsdr", "rtdr", "dr"]
+    doktorArr = ["drsc","dsc", "phd", "thd", "phdr", "judr", "rndr", "pharmdr", "thdr", "mudr", "mddr", "mvdr", "paeddr", "msdr", "rcdr", "rsdr", "rtdr", "dr", "artd", "darts", "da"]
     inzenyrArr = ["ing", "ingarch"]
     magistrArr = ["mgr", "mga", "phmr", "thmgr"]
     licencArr = ["thlic"]

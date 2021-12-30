@@ -106,7 +106,7 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
             case "artd":
             case "darts":
             case "da":
-                detailtext += "<i>Doktor umění je slovenský akademický titul. Obodoba PhD pro umělce. (ISCED 8).</i>" + "<p><b>Titul:</b>    " + "ThMgr." + "</p>"
+                detailtext += "<i>Doktor umění je slovenský akademický titul. Obodoba PhD pro umělce. (ISCED 8).</i>" + "<p><b>Titul:</b>    " + "ArtD" + "</p>"
                 break;
 
             // 7 + rigorozni + minulost 
