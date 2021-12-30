@@ -103,6 +103,12 @@ function nastavDetail(nameArray, isWoman, hasFunction, whatFunction) {
                 detailtext += "<i>Doktor teologie (theologiae doctor) byla vyšší vědecká hodnost (ISCED 8). Nyní nahrazeno ThDr. nebo Ph.D.</i>" + "<p><b>Titul:</b>    " + "Th.D." + "</p>"
                 break;
 
+            case "artd":
+            case "darts":
+            case "da":
+                detailtext += "<i>Doktor umění je slovenský akademický titul. Obodoba PhD pro umělce. (ISCED 8).</i>" + "<p><b>Titul:</b>    " + "ThMgr." + "</p>"
+                break;
+
             // 7 + rigorozni + minulost 
             case "akadarch":
                 detailtext += "<i>Akademický architekt byl akademicko-vědecký titul (ISCED 7).</i>" + "<p><b>Titul:</b>    " + "ak. arch." + "</p>"
