@@ -2,14 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-  <loc>https://www.titulator.cz/</loc>
-  <lastmod>2022-02-28T09:51:56+00:00</lastmod>
+  <loc>https://titulator.smid.io/</loc>
+  <lastmod>2023-04-29T19:07:56+00:00</lastmod>
   <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://www.titulator.cz/ukraine.html</loc>
-  <lastmod>2022-02-28T09:51:56+00:00</lastmod>
-  <priority>0.80</priority>
 </url>
 
 </urlset>

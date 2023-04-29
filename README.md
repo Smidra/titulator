@@ -2,7 +2,7 @@ Titulátor
 =========
 *Titulátor Vám pomůže oslovit akademika s mnoha tituly.*
 
-K dispozici na adrese **[Titulátor.cz](https://www.titulator.cz/)**
+K dispozici na adrese **[Titulátor.smid.io](https://titulator.smid.io/)**
 
 <img src="./capka.svg" width="60" alt="Ori">
 
